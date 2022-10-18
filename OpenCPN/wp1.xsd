@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:opencpn="https://opencpn-manuals.github.io/xmlschemas/OpenCPN/opencpn_v1.0.xsd" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.topografix.com/GPX/1/1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="https://opencpn-manuals.github.io/xmlschemas/OpenCPN/opencpn_v1.0.xsd" />
+  <xs:element name="gpx">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="wpt">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="time" type="xs:dateTime" />
+              <xs:element name="name" type="xs:string" />
+              <xs:element name="sym" type="xs:string" />
+              <xs:element name="type" type="xs:string" />
+              <xs:element name="extensions">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="opencpn:guid" />
+                    <xs:element ref="opencpn:viz_name" />
+                    <xs:element ref="opencpn:arrival_radius" />
+                    <xs:element ref="opencpn:waypoint_range_rings" />
+                    <xs:element ref="opencpn:scale_min_max" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="lat" type="xs:decimal" use="required" />
+            <xs:attribute name="lon" type="xs:decimal" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="version" type="xs:decimal" use="required" />
+      <xs:attribute name="creator" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
