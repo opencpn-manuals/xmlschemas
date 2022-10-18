@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:opencpn="https://opencpn-manuals.github.io/xmlschemas/OpenCPN/opencpn_v1.0.xsd" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.topografix.com/GPX/1/1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import namespace="https://opencpn-manuals.github.io/xmlschemas/OpenCPN/opencpn_v1.0.xsd" />
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:opencpn="http://opencpn-manuals.github.io/xmlschemas/OpenCPN" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.topografix.com/GPX/1/1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://opencpn-manuals.github.io/xmlschemas/OpenCPN" />
   <xs:element name="gpx">
     <xs:complexType>
       <xs:sequence>
